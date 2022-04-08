@@ -8,9 +8,9 @@ shell: bash
 env:
   variables:
     name: "pom.xml"
-    exportedVariables:
-      - name
-      - version
+  exportedVariables:
+    - name
+    - version
 steps:
   - type: VulnerabilityAudit        # required
     name: "Vulnerability Audit Step" # optional
