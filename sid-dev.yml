@@ -6,14 +6,17 @@ timeoutInSeconds: 20000
 runAs: root
 shell: bash
 env:
-  exportedVariables:
-    - version
+  variables:
+    name: "pom.xml"
+    exportedVariables:
+      - name
+      - version
 steps:
   - type: VulnerabilityAudit        # required
     name: "Vulnerability Audit Step" # optional
     configuration:                   # required
       buildType: maven               # required
-      pomFilePath: ${OCI_PRIMARY_SOURCE_DIR}/pom.xml # required (Supports parameter substitution)
+      pomFilePath: ${OCI_PRIMARY_SOURCE_DIR}/${name} # required (Supports parameter substitution)
       packagesToIgnore:
         - com.*
       maxPermissibleCvssV2Score: 10.0                # optional (defaults to 0.0)
