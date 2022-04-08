@@ -16,7 +16,7 @@ steps:
     name: "Vulnerability Audit Step" # optional
     configuration:                   # required
       buildType: maven               # required
-      pomFilePath: ${OCI_PRIMARY_SOURCE_DIR}/${name} # required (Supports parameter substitution)
+      pomFilePath: ${name} # required (Supports parameter substitution)
       packagesToIgnore:
         - com.*
       maxPermissibleCvssV2Score: 10.0                # optional (defaults to 0.0)
