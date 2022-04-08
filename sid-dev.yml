@@ -7,7 +7,7 @@ runAs: root
 shell: bash
 env:
   variables:
-    name: "pom.xml"
+    name: pom.xml
   exportedVariables:
     - name
     - version
